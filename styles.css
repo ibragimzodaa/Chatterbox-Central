@@ -68,7 +68,7 @@
     cursor: pointer;
 }
 .chat{
-    max-width: 1400px;
+    max-width: 100vh;
     padding: 40px;
     margin: auto;
     /* text-align: end; */
