@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatterbox Central</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="data:image/png;base64,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">
+</head>
+<body>
+    <!-- <div class="polny">
+
+        <div class="register">
+            <h2>Register</h2>
+            <br>
+            <input class="inpEmail inp" type="email" placeholder="Your name">
+            <br>
+            <br>
+            <input class="inpPass inp" type="password" placeholder="Your password">
+            <br>
+            <br>
+            <button class="btnRegister but">Register</button>
+            <button class="btnLogin but">Login</button>
+        </div>
+    </div> -->
+    <div class="nav">
+        <h1>CHAT FOR FRONT - ENDS</h1>
+    </div>
+    <div class="chat">
+        <div class="mes">
+        </div>
+        <div class="chats">
+            <form class="formadd">
+                <input class="inpText" required name="inpText" type="text" placeholder="Type your messege ....">
+                <button class="btnShare" type="submit">share</button>
+            </form>
+        </div>
+    </div>
+    <dialog class="editUser">
+        <form class="editUserForm">
+            <input class="editmessage" required name="inpTitle" type="text" placeholder="Type your messege ....">
+            <button  class="btnSave" type="submit">Save</button>
+        </form>
+    </dialog>
+        <script src="./script.js"></script>
+</body>
+</html>
